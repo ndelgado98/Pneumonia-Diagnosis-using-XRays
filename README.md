@@ -24,22 +24,24 @@ In this case, using x-ray images of pediatric patients to identify whether or no
 
 ## **Language and Packages Used**
 
-* from keras.models import Sequential
-* from keras.layers import Dense , Activation
-* from keras.layers import Dropout
-* from keras.layers import Flatten
-* from keras.layers import Conv2D , BatchNormalization
-* from keras.layers import MaxPooling2D
-* from keras.utils import np_utils
-* from keras import layers
-* from keras import models
+* import os
+* import numpy as np
+* import pandas as pd 
+* import random
+* import cv2
+* import matplotlib.pyplot as plt
+* import keras.backend as K
+* from keras.models import Model, Sequential
+* from keras.layers import Input, Dense, Flatten, Dropout, BatchNormalization
+* from keras.layers import Conv2D, SeparableConv2D, MaxPool2D, LeakyReLU, Activation
+* from keras.optimizers import Adam
+* from keras.preprocessing.image import ImageDataGenerator
+* from keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, EarlyStopping
+* import tensorflow as tf
+* import skimage
+* from skimage.transform import resize
 
-* from sklearn.model_selection import GridSearchCV
-* from keras.wrappers.scikit_learn import KerasClassifier
-* from keras import optimizers
 
-from keras.preprocessing.image import ImageDataGenerator
-import datetime
 
-from keras.constraints import maxnorm
-from keras.optimizers import SGD , RMSprop
+
+
